@@ -1,0 +1,26 @@
+<div class="responsive-form">
+  <p>Formulaire de connexion</p>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div >
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nom du login</mat-label>
+      <input matInput type="text" formControlName="NomLogin" [class.is-invalid]="formGroup.controls.NomLogin.invalid"/>
+    </mat-form-field>
+    <small class="text-danger" *ngIf="formGroup.controls.NomLogin.invalid">
+      <ng-container *ngIf="formGroup.controls.NomLogin.hasError('required')">
+        le login est obligatoire à saisir
+      </ng-container>
+      <ng-container *ngIf="formGroup.controls.NomLogin.hasError('minlength')">
+        le login est trop long
+      </ng-container>
+    </small>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label> Mot de passe </mat-label>
+      <input matInput type="password" formControlName="MotDePasse"/>
+    </mat-form-field>
+
+  </div>
+  <button mat-button="elevated" class="btn" type="submit"> Connexion</button>
+  <i> vous n'avez pas de compte ? <a href="#"> Inscription</a></i>
+</form>
+</div>
