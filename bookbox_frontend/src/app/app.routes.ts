@@ -8,6 +8,7 @@ import { HomeComponent } from './Component/home/home.component';
 import { AddBoxComponent } from './AddElementInComponent/add-box/add-box.component';
 import { AddReservationComponent } from './AddElementInComponent/add-reservation/add-reservation.component';
 import { AddUserComponent } from './AddElementInComponent/add-user/add-user.component';
+import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component'
 
 
 export const routes: Routes = [
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path:'add-reservation', component: AddReservationComponent },
   { path:'map', component: CoordinatesComponent },
   { path:'login', component: HomeComponent },
+  { path:'authentication', component:ConnexionFormComponent}
 
 ];
