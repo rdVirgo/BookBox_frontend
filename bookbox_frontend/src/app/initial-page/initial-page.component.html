@@ -12,10 +12,10 @@
     <mat-toolbar>
 
 
-      <button mat-button routerLink="/home">Home</button>
+      <button class="button" mat-button routerLink="/home">Home</button>
 
 
-      <button  mat-button [matMenuTriggerFor]="box">
+      <button class="button"  mat-button [matMenuTriggerFor]="box">
         Box
         <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
       </button>
@@ -26,7 +26,7 @@
       </mat-menu>
 
 
-      <button  mat-button [matMenuTriggerFor]="reservation">
+      <button class="button"  mat-button [matMenuTriggerFor]="reservation">
         Reservation
         <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
       </button>
@@ -36,7 +36,7 @@
         <button mat-menu-item routerLink="/load-reservation">Load Reservation</button>
       </mat-menu>
 
-      <button  mat-button [matMenuTriggerFor]="user">
+      <button class="button"  mat-button [matMenuTriggerFor]="user">
         User
         <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
       </button>
@@ -46,11 +46,11 @@
         <button mat-menu-item routerLink="/load-user">Load User</button>
       </mat-menu>
 
-      <button mat-button routerLink="map">Map</button>
+      <button class="button" mat-button routerLink="map">Map</button>
 
       <span class="spacer"></span>
 
-      <button mat-button routerLink="/authentication">Login</button>
+      <button class="login-button" mat-button routerLink="/authentication">Login</button>
     </mat-toolbar>
 
 
