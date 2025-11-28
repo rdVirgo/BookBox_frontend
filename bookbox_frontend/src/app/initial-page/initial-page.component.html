@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Initial Page</title>
+</head>
+<body>
+  <main>
+    <mat-toolbar>
+
+
+      <button mat-button routerLink="/home">Home</button>
+
+
+      <button  mat-button [matMenuTriggerFor]="box">
+        Box
+        <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #box>
+        <button mat-menu-item routerLink="/add-box">Add Box</button>
+        <button mat-menu-item routerLink="/load-box">Load Box</button>
+      </mat-menu>
+
+
+      <button  mat-button [matMenuTriggerFor]="reservation">
+        Reservation
+        <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #reservation>
+        <button mat-menu-item routerLink="/add-reservation">Add Reservation</button>
+        <button mat-menu-item routerLink="/load-reservation">Load Reservation</button>
+      </mat-menu>
+
+      <button  mat-button [matMenuTriggerFor]="user">
+        User
+        <mat-icon iconPositionEnd >arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #user>
+        <button mat-menu-item routerLink="/add-user">Add Users</button>
+        <button mat-menu-item routerLink="/load-user">Load User</button>
+      </mat-menu>
+
+      <button mat-button routerLink="map">Map</button>
+
+      <span class="spacer"></span>
+
+      <button mat-button routerLink="/login">Login</button>
+    </mat-toolbar>
+
+
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+  </main>
+</body>
+</html>

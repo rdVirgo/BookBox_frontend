@@ -1,3 +1,24 @@
 import { Routes } from '@angular/router';
+import { InitialPageComponent } from './initial-page/initial-page.component';
+import { BoxComponent } from './Component/box/box.component';
+import { ReservationComponent } from './Component/reservation/reservation.component';
+import { UserComponent } from './Component/user/user.component';
+import { CoordinatesComponent } from './Component/coordinates/coordinates.component';
+import { HomeComponent } from './Component/home/home.component';
+import { AddBoxComponent } from './AddElementInComponent/add-box/add-box.component';
+import { AddReservationComponent } from './AddElementInComponent/add-reservation/add-reservation.component';
+import { AddUserComponent } from './AddElementInComponent/add-user/add-user.component';
 
-export const routes: Routes = [];
+
+export const routes: Routes = [
+  { path:'home', component: HomeComponent },
+  { path:'load-user', component: UserComponent },
+  { path:'add-user', component: AddUserComponent },
+  { path:'load-box', component: BoxComponent },
+  { path:'add-box', component: AddBoxComponent },
+  { path:'load-reservation', component: ReservationComponent },
+  { path:'add-reservation', component: AddReservationComponent },
+  { path:'map', component: CoordinatesComponent },
+  { path:'login', component: HomeComponent },
+
+];
