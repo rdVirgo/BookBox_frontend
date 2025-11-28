@@ -1,3 +1,6 @@
 .spacer {
   flex:auto;
 }
+.drawer{
+  min-height: 645px;
+}
