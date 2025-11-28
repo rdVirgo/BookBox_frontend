@@ -20,7 +20,6 @@ export const routes: Routes = [
   { path:'load-reservation', component: ReservationComponent },
   { path:'add-reservation', component: AddReservationComponent },
   { path:'map', component: CoordinatesComponent },
-  { path:'login', component: HomeComponent },
   { path:'authentication', component:ConnexionFormComponent}
 
 ];
