@@ -3,6 +3,8 @@
 }
 .drawer{
   min-height: 645px;
+  margin-top:50px;
+  padding:5px;
 }
 
 mat-toolbar{
@@ -16,3 +18,4 @@ mat-toolbar{
 .login-button:hover{
   background-color:#8736e3;
 }
+

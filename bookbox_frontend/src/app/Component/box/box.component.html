@@ -10,12 +10,6 @@
 <body>
   <main>
     <div>
-      <div>
-
-        <h1 *ngFor="let b of listBoxes">Load Boxes  {{b.boxId}} {{b.name}} {{b.quantity}} {{b.description}}
-          @if(b.coordinates){ {{b.coordinates.latitude}} ; {{b.coordinates.longitude}} }
-        </h1>
-      </div>
 
       <div>
         <mat-card>
@@ -26,12 +20,16 @@
 
           <mat-card-content>
 
-            <mat-form-field>
-              <mat-label>
-                Filter Boxes
-              </mat-label>
-              <input matInput type="text" placeholder="Filter">
-            </mat-form-field>
+            <div class="nav-box">
+              <mat-form-field>
+                <mat-label>
+                  Filter Boxes
+                </mat-label>
+                <input matInput type="text" placeholder="Filter">
+              </mat-form-field>
+
+              <button mat-raised-button color="primary">Add</button>
+            </div>
 
 
             <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z1">
@@ -76,7 +74,7 @@
           </mat-card-content>
 
           <mat-card-footer>
-            Footer
+            Mamadou & Radia
           </mat-card-footer>
 
         </mat-card>

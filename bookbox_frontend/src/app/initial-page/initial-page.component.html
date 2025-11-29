@@ -9,11 +9,10 @@
 </head>
 <body>
   <main>
+
+
     <mat-toolbar>
-
-
       <button class="button" mat-button routerLink="/home">Home</button>
-
 
       <button class="button"  mat-button [matMenuTriggerFor]="box">
         Box
@@ -53,14 +52,9 @@
       <button class="login-button" mat-button routerLink="/authentication">Login</button>
     </mat-toolbar>
 
-
-    <mat-drawer-container>
-      <mat-drawer-content>
-        <div class="drawer">
-          <router-outlet></router-outlet>
-        </div>
-      </mat-drawer-content>
-    </mat-drawer-container>
+    <div class="drawer">
+      <router-outlet></router-outlet>
+    </div>
 
 
 
