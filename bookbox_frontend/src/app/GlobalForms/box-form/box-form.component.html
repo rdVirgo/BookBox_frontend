@@ -1,0 +1,33 @@
+<form class="forms" [formGroup]="responses" >
+
+  <div class="boxes-fields">
+    <mat-form-field color="warn" class="boxes-form">
+      <mat-label>Box Name</mat-label>
+      <input formControlName="boxName" required matInput>
+    </mat-form-field>
+
+    <mat-form-field color="primary" class="boxes-form">
+      <mat-label>Box Description</mat-label>
+      <textarea matInput formControlName="boxDescription"></textarea>
+    </mat-form-field>
+
+    <mat-form-field color="warn" class="boxes-form">
+      <mat-label>Quantity</mat-label>
+      <input formControlName="boxQuantity" type="number" step="1" min="0" required matInput>
+    </mat-form-field>
+  </div>
+
+
+  <div class="latitude-longitude">
+    <mat-form-field color="accent" class="latitude">
+      <mat-label>Latitude</mat-label>
+      <input formControlName="boxLatitude" type="number" required matInput>
+    </mat-form-field>
+
+    <mat-form-field color="accent" class="longitude">
+      <mat-label>Longitude</mat-label>
+      <input formControlName="boxLongitude" type="number" required matInput>
+    </mat-form-field>
+  </div>
+
+</form>

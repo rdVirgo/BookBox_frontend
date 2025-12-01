@@ -8,7 +8,8 @@ import { HomeComponent } from './Component/home/home.component';
 import { AddBoxComponent } from './AddElementInComponent/add-box/add-box.component';
 import { AddReservationComponent } from './AddElementInComponent/add-reservation/add-reservation.component';
 import { AddUserComponent } from './AddElementInComponent/add-user/add-user.component';
-import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component'
+import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component';
+import { BoxFormComponent} from './GlobalForms/box-form/box-form.component';
 
 
 export const routes: Routes = [
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path:'load-reservation', component: ReservationComponent },
   { path:'add-reservation', component: AddReservationComponent },
   { path:'map', component: CoordinatesComponent },
-  { path:'authentication', component:ConnexionFormComponent}
+  { path:'authentication', component:ConnexionFormComponent},
+  { path:'box-form', component:BoxFormComponent}
 
 ];

@@ -70,6 +70,26 @@ export class BoxComponent implements OnInit, AfterViewInit{
 
   }
 
+  handleAddBox():void{
+    alert("You will add a new box");
+    this.router.navigateByUrl("/add-box");
+  }
+
+  handleUpdateBox():void{
+    let conf = confirm("Are you sure you want to update this box ?");
+    if (conf){
+      this.router.navigateByUrl("/add-box");
+    }
+  }
+
+  handleDeleteBox():void{
+    confirm("Are you sure you want to delete this box ?");
+  }
+
+  filterBox(event: Event){
+    alert("You will filterBox");
+  }
+
   ngOnInit():void{
 
     this.dataSource = new MatTableDataSource<Box>([]);
