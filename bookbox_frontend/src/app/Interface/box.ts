@@ -7,3 +7,10 @@ export interface Box {
   description : string;
   coordinates : Coordinates;
 }
+
+export interface CreatedBox{
+  name : string;
+  quantity : number;
+  description : string;
+  coordinates : Coordinates;
+}

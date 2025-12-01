@@ -3,7 +3,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import {ReactiveFormsModule, FormsModule, FormGroup, FormControl} from '@angular/forms'
+import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-box-form',
@@ -24,11 +24,13 @@ export class BoxFormComponent implements OnInit {
 
 
   responses = new FormGroup({
-    boxName: new FormControl(""),
-    boxDescription:new FormControl(""),
-    boxQuantity:new FormControl(""),
-    boxLatitude:new FormControl(""),
-    boxLongitude:new FormControl(""),
+    boxName: new FormControl<string | null >(null, [Validators.required]),
+    boxDescription:new FormControl<string | null >(null),
+    boxQuantity:new FormControl<string | null >(null, [Validators.required]),
+    boxLatitude:new FormControl<number | null >(null, [Validators.required,
+      Validators.min(-90), Validators.max(90)]),
+    boxLongitude:new FormControl<number | null >(null, [Validators.required,
+      Validators.min(-180), Validators.max(180)]),
   })
 
   constructor(){}
@@ -37,8 +39,12 @@ export class BoxFormComponent implements OnInit {
 
   }
 
-  getAllInputValues(){
-    return this.responses.value;
+  getAllInputValues():any{
+    return this.responses;
+  }
+
+  resetForm(){
+    this.responses.reset();
   }
 
 }

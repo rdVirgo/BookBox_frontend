@@ -1,6 +1,6 @@
 
 export interface Coordinates {
-  coordinateId: number;
+  coordinateId?: number;
   latitude: number;
   longitude: number;
 }
