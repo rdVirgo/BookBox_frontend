@@ -10,6 +10,7 @@ import { AddReservationComponent } from './AddElementInComponent/add-reservation
 import { AddUserComponent } from './AddElementInComponent/add-user/add-user.component';
 import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component';
 import { BoxFormComponent} from './GlobalForms/box-form/box-form.component';
+import { UpdateBoxComponent} from './UpdateElementComponent/update-box/update-box.component';
 
 
 export const routes: Routes = [
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path:'add-reservation', component: AddReservationComponent },
   { path:'map', component: CoordinatesComponent },
   { path:'authentication', component:ConnexionFormComponent},
-  { path:'box-form', component:BoxFormComponent}
+  { path:'box-form', component:BoxFormComponent},
+  { path:'update-box', component:UpdateBoxComponent}
 
 ];

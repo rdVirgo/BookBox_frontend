@@ -1,41 +1,13 @@
-.boxes-form{
-  width:600px;
-  height:90px;
-}
-
-.boxes-fields{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  height:300px;
-  gap:15px;
-}
-
 .box-title h1{
   font-family:Georgia;
   font-size:50px;
   color:#046878;
 }
 
-mat-form-field{
-  background-color:#e1f0c5;
-}
-
-
-
-.latitude-longitude, .box-button, .box-title{
+.box-button, .box-title{
   display:flex;
   justify-content:center;
   margin-top:25px;
-}
-
-.longitude{
-  margin-left:90px;
-}
-
-.latitude{
-  margin-right:90px;
 }
 
 .box-mat-button{

@@ -78,7 +78,7 @@ export class BoxComponent implements OnInit, AfterViewInit{
   handleUpdateBox():void{
     let conf = confirm("Are you sure you want to update this box ?");
     if (conf){
-      this.router.navigateByUrl("/add-box");
+      this.router.navigateByUrl("/update-box");
     }
   }
 

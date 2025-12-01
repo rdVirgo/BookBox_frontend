@@ -1,7 +1,4 @@
 import { AfterViewInit, ViewChild, OnInit, Component } from '@angular/core';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { BoxFormComponent } from '../../GlobalForms/box-form/box-form.component';
 
@@ -9,9 +6,6 @@ import { BoxFormComponent } from '../../GlobalForms/box-form/box-form.component'
   selector: 'app-add-box',
   standalone: true,
   imports: [
-    MatSelectModule,
-    MatInputModule,
-    MatFormFieldModule,
     MatButtonModule,
     BoxFormComponent
   ],
