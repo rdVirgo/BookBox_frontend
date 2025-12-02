@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { InitialPageComponent } from './initial-page/initial-page.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 @Component({
@@ -8,7 +10,8 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
   standalone: true,
   imports: [
     RouterOutlet,
-    InitialPageComponent
+    InitialPageComponent,
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,3 +1,21 @@
 .spacer {
   flex:auto;
 }
+.drawer{
+  min-height: 645px;
+  margin-top:50px;
+  padding:5px;
+}
+
+mat-toolbar{
+  background-color:#de9a07;
+}
+
+.button:hover{
+  background-color:white;
+}
+
+.login-button:hover{
+  background-color:#8736e3;
+}
+

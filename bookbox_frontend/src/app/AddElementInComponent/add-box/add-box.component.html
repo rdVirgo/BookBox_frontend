@@ -1,1 +1,28 @@
-<p>add-box works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box</title>
+</head>
+<body>
+  <main>
+    <div>
+      <div class="box-title">
+        <h1>Create new Box</h1>
+      </div>
+
+      <div>
+        <app-box-form></app-box-form>
+      </div>
+
+      <div class="box-button">
+        <button (click)="createBox()" class="box-mat-button" mat-raised-button color="primary">Create</button>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -6,6 +6,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterOutlet, RouterLink } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+
 
 
 @Component({
@@ -19,7 +22,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    HttpClientModule
   ],
   templateUrl: './initial-page.component.html',
   styleUrl: './initial-page.component.css'
