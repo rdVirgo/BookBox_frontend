@@ -8,7 +8,7 @@
 }
 
 mat-toolbar{
-  background-color:#de9a07;
+  background-color:#0070AD;
 }
 
 .button:hover{
@@ -16,6 +16,11 @@ mat-toolbar{
 }
 
 .login-button:hover{
-  background-color:#8736e3;
+  background-color:red;
 }
 
+.footer{
+  background-color:#0070AD;
+  text-align: center;
+  color :white;
+}

@@ -11,6 +11,7 @@ import { AddUserComponent } from './AddElementInComponent/add-user/add-user.comp
 import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component';
 import { BoxFormComponent} from './GlobalForms/box-form/box-form.component';
 import { UpdateBoxComponent} from './UpdateElementComponent/update-box/update-box.component';
+import {InscriptionFormComponent} from "./Component/inscription-form/inscription-form.component";
 
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path:'map', component: CoordinatesComponent },
   { path:'authentication', component:ConnexionFormComponent},
   { path:'box-form', component:BoxFormComponent},
-  { path:'update-box', component:UpdateBoxComponent}
+  { path:'update-box', component:UpdateBoxComponent},
+  { path:'SignIn', component:InscriptionFormComponent}
 
 ];

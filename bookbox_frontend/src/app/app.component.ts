@@ -18,4 +18,5 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'bookbox_frontend';
+
 }
