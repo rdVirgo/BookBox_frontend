@@ -1,0 +1,51 @@
+<div class="responsive-form">
+  <p>Sig Up form</p>
+  <form [formGroup]="formGroup" >
+    <div >
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label> Name </mat-label>
+        <input matInput type="text" formControlName="Name"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label> Surname </mat-label>
+        <input matInput type="text" formControlName="Surname"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>login name</mat-label>
+        <input matInput type="text" formControlName="NomLogin" [class.is-invalid]="formGroup.controls.LoginName.invalid"/>
+      </mat-form-field>
+      <small class="text-danger" *ngIf="formGroup.controls.LoginName.invalid">
+        <ng-container *ngIf="formGroup.controls.LoginName.hasError('required')">
+          the login is mandatory
+        </ng-container>
+        <ng-container *ngIf="formGroup.controls.LoginName.hasError('minlength')">
+          the login is too long
+        </ng-container>
+      </small>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label> Password </mat-label>
+        <input matInput type="password" formControlName="MotDePasse"/>
+      </mat-form-field>
+      <small class="text-danger" *ngIf="formGroup.controls.Password.invalid">
+        <ng-container *ngIf="formGroup.controls.Password.hasError('required')">
+          The password is mandatory
+        </ng-container>
+        <ng-container *ngIf="formGroup.controls.Password.hasError('minlength')">
+          the password is too short
+        </ng-container>
+      </small>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label> Confirm Password </mat-label>
+        <input matInput type="password" formControlName="MotDePasse"/>
+      </mat-form-field>
+      <small class="text-danger" *ngIf="formGroup.hasError('passwordMismatch')">
+        Passwords do not match — please re-enter the same password.
+      </small>
+
+    </div>
+    <button mat-button="elevated" class="btn" type="submit" (click)="register()"> Register</button>
+    <mat-error *ngIf="wrongCredentials">  Wrong credential , please try again !</mat-error>
+    <i> Already an account ? <a routerLink="/authentication"> log in </a></i>
+  </form>
+</div>

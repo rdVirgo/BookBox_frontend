@@ -1,26 +1,35 @@
 <div class="responsive-form">
-  <p>Formulaire de connexion</p>
-<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <p>Login form</p>
+<form [formGroup]="formGroup" >
   <div >
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Nom du login</mat-label>
-      <input matInput type="text" formControlName="NomLogin" [class.is-invalid]="formGroup.controls.NomLogin.invalid"/>
+      <input matInput type="text" formControlName="NomLogin" [class.is-invalid]="formGroup.controls.LoginName.invalid"/>
     </mat-form-field>
-    <small class="text-danger" *ngIf="formGroup.controls.NomLogin.invalid">
-      <ng-container *ngIf="formGroup.controls.NomLogin.hasError('required')">
-        le login est obligatoire à saisir
+    <small class="text-danger" *ngIf="formGroup.controls.LoginName.invalid">
+      <ng-container *ngIf="formGroup.controls.LoginName.hasError('required')">
+        the login is mandatory
       </ng-container>
-      <ng-container *ngIf="formGroup.controls.NomLogin.hasError('minlength')">
-        le login est trop long
+      <ng-container *ngIf="formGroup.controls.LoginName.hasError('minlength')">
+        the login is too long
       </ng-container>
     </small>
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label> Mot de passe </mat-label>
-      <input matInput type="password" formControlName="MotDePasse"/>
+      <mat-label> Password </mat-label>
+      <input matInput type="password" formControlName="Password"/>
     </mat-form-field>
+    <small class="text-danger" *ngIf="formGroup.controls.Password.invalid">
+      <ng-container *ngIf="formGroup.controls.Password.hasError('required')">
+        The password is mandatory
+      </ng-container>
+      <ng-container *ngIf="formGroup.controls.Password.hasError('minlength')">
+        the password is too short
+      </ng-container>
+    </small>
 
   </div>
-  <button mat-button="elevated" class="btn" type="submit"> Connexion</button>
-  <i> vous n'avez pas de compte ? <a href="#"> Inscription</a></i>
+  <button mat-button="elevated" class="btn" type="submit" (click)="login()"> Connexion</button>
+  <mat-error *ngIf="wrongCredentials">  Wrong credential , please try again !</mat-error>
+  <i> Don't have an account ? <a routerLink="/SignIn"> Sign in </a></i>
 </form>
 </div>
