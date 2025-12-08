@@ -31,7 +31,7 @@ export class BoxFormComponent implements OnInit {
       Validators.min(-90), Validators.max(90)]),
     boxLongitude:new FormControl<number | null >(null, [Validators.required,
       Validators.min(-180), Validators.max(180)])
-  })
+  });
 
   constructor(){}
 

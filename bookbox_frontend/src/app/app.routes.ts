@@ -29,6 +29,6 @@ export const routes: Routes = [
   { path:'update-box', component:UpdateBoxComponent},
   { path:'SignIn', component:InscriptionFormComponent},
   {path:'', redirectTo:'home', pathMatch: 'full'},
-    {path:'**', redirectTo:'home',pathMatch: 'full'}
+  {path:'**', redirectTo:'home',pathMatch: 'full'}
 
 ];

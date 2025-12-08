@@ -1,0 +1,23 @@
+<form class="reservation-forms" [formGroup]="reservations" >
+
+  <div class="boxes-fields">
+    <mat-form-field color="warn" class="reservation-form-field">
+      <mat-label>Place</mat-label>
+      <input formControlName="place" required matInput>
+    </mat-form-field>
+
+    <mat-form-field color="primary" class="reservation-form-field">
+      <mat-label>User</mat-label>
+      <input matInput formControlName="user" required>
+    </mat-form-field>
+
+    <mat-form-field color="warn" class="reservation-form-field">
+      <mat-label>Reserved Quantity</mat-label>
+      <input formControlName="reservedQuantity" type="number" step="1" min="0" required matInput>
+    </mat-form-field>
+  </div>
+
+
+
+
+</form>
