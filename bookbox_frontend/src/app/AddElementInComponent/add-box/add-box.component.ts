@@ -41,16 +41,22 @@ export class AddBoxComponent implements OnInit, AfterViewInit{
       }
     };
 
-    this.boxService.createBox(box).subscribe({
-      next: (boxes) =>{
-        alert("A new box was created !");
-      },
-      error: (err) =>{
-        alert("Error while creating a box. Make sure you are provided all the required information.");
-      }
-    });
+    if (this.isValidLatitude(latitudeBox) && this.isValidLongitude(longitudeBox)){
+      this.boxService.createBox(box).subscribe({
+            next: (boxes) =>{
+              alert("A new box was created !");
+            },
+            error: (err) =>{
+              alert("Error while creating a box. Make sure you are provided all the required information.");
+            }
+          });
 
-    this.boxFormComponent.resetForm();
+          this.boxFormComponent.resetForm();
+    }else{
+      alert("Provide correct value for latitude and/or longitude");
+    }
+
+
 
   }
 
@@ -62,6 +68,13 @@ export class AddBoxComponent implements OnInit, AfterViewInit{
     console.log("Form : " + this.boxFormComponent.getAllInputValues());
   }
 
+  private isValidLatitude(latitude:number):boolean{
+    return (latitude >= -90 && latitude <= 90);
+  }
+
+  private isValidLongitude(longitude:number):boolean{
+    return (longitude >= -180 && longitude <= 180);
+  }
 
 
 
