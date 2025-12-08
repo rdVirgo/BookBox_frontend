@@ -15,6 +15,8 @@ import {InscriptionFormComponent} from "./Component/inscription-form/inscription
 
 
 export const routes: Routes = [
+  {path:'', redirectTo:'home', pathMatch: 'full'},
+  {path:'**', redirectTo:'home',pathMatch: 'full'},
   { path:'home', component: HomeComponent },
   { path:'load-user', component: UserComponent },
   { path:'add-user', component: AddUserComponent },
