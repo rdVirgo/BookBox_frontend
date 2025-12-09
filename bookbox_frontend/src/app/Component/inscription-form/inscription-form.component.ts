@@ -70,18 +70,17 @@ export class InscriptionFormComponent {
       surname: this.formGroup.value.Surname,
       username: this.formGroup.value.LoginName,
       password: this.formGroup.value.Password,
-      email: "test@example.com"
+      email: this.formGroup.value.Email
     };
 
     this.http.post('/api/users', user).subscribe(
       res => {
-        console.log("Utilisateur créé avec succès", res);
+        console.log("User Created with success !!", res);
         this.wrongCredentials = false;
-        this.successMessage = 'Utilisateur créé avec succès !';
         this.formGroup.reset();
       },
       error => {
-        console.error("Erreur lors de l'inscription", error);
+        console.error("an error occurred while signing up", error);
         this.wrongCredentials = true;
       }
     );

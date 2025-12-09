@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ReactiveFormsModule} from "@angular/forms";
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule} from "@angular/material/card";
 import {NgIf} from "@angular/common";
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-connexion-form',
   standalone: true,
@@ -20,9 +21,26 @@ export class ConnexionFormComponent {
    Password: new FormControl('',[Validators.required, Validators.minLength(8)])
  });
   wrongCredentials = false;
+  constructor(private http: HttpClient) {}
 
     login() {
-      this.wrongCredentials= ! this.wrongCredentials;
-    console.log(this.formGroup.value);
-  }
+      if (this.formGroup.invalid) {
+        this.formGroup.markAllAsTouched();
+        return;
+      }
+      const credentials = {
+        username: this.formGroup.value.LoginName,
+        password: this.formGroup.value.Password
+      };
+      this.http.post('/api/auth/login',credentials).subscribe(
+        (res) => {
+          this.wrongCredentials=false;
+          console.log("successful login");
+        },
+        (err) => {
+          console.error("login failed",err);
+          this.wrongCredentials=true;
+        }
+      )
+    }
 }
