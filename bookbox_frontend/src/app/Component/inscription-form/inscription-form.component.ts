@@ -14,6 +14,7 @@ import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-inscription-form',
@@ -34,32 +35,55 @@ import {RouterLink} from "@angular/router";
 })
 export class InscriptionFormComponent {
 
-  passwordMatchValidator: ValidatorFn = ( control: AbstractControl
-): ValidationErrors | null => {
-  const form = control as FormGroup;
+  passwordMatchValidator: ValidatorFn = (control: AbstractControl
+  ): ValidationErrors | null => {
+    const form = control as FormGroup;
     const pass = form.get('Password')?.value;
     const confirm = form.get('Password_Confirmation')?.value;
-    return pass === confirm ? null : { passwordMismatch: true };
+    return pass === confirm ? null : {passwordMismatch: true};
 
   };
   formGroup = new FormGroup({
-    Name : new FormControl('', Validators.required),
-    Surname : new FormControl('', Validators.required),
-    LoginName: new FormControl('', [Validators.required,Validators.maxLength(150)]),
-    Password: new FormControl('',[Validators.required, Validators.minLength(8)]),
-    Password_Confirmation : new FormControl('',[Validators.required]),
-
-  },
-  { validators: this.passwordMatchValidator });
+      Name: new FormControl('', Validators.required),
+      Surname: new FormControl('', Validators.required),
+      LoginName: new FormControl('', [Validators.required, Validators.maxLength(150)]),
+      Password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      Password_Confirmation: new FormControl('', [Validators.required]),
+      Email: new FormControl('', [Validators.required, Validators.email])
+    },
+    {validators: this.passwordMatchValidator});
 
   wrongCredentials = false;
+  successMessage: string = '';
 
+  constructor(private http: HttpClient) {
+  }
 
   register() {
-      if (this.formGroup.invalid) {
-        this.formGroup.markAllAsTouched();
-        return;
-      }
-      console.log(this.formGroup.value);
+    if (this.formGroup.invalid) {
+      this.formGroup.markAllAsTouched();
+      return;
     }
+
+    const user = {
+      name: this.formGroup.value.Name,
+      surname: this.formGroup.value.Surname,
+      username: this.formGroup.value.LoginName,
+      password: this.formGroup.value.Password,
+      email: "test@example.com"
+    };
+
+    this.http.post('/api/users', user).subscribe(
+      res => {
+        console.log("Utilisateur créé avec succès", res);
+        this.wrongCredentials = false;
+        this.successMessage = 'Utilisateur créé avec succès !';
+        this.formGroup.reset();
+      },
+      error => {
+        console.error("Erreur lors de l'inscription", error);
+        this.wrongCredentials = true;
+      }
+    );
+  }
 }

@@ -15,8 +15,6 @@ import {InscriptionFormComponent} from "./Component/inscription-form/inscription
 
 
 export const routes: Routes = [
-  {path:'', redirectTo:'home', pathMatch: 'full'},
-  {path:'**', redirectTo:'home',pathMatch: 'full'},
   { path:'home', component: HomeComponent },
   { path:'load-user', component: UserComponent },
   { path:'add-user', component: AddUserComponent },
@@ -28,6 +26,7 @@ export const routes: Routes = [
   { path:'authentication', component:ConnexionFormComponent},
   { path:'box-form', component:BoxFormComponent},
   { path:'update-box', component:UpdateBoxComponent},
-  { path:'SignIn', component:InscriptionFormComponent}
-
+  { path:'SignIn', component:InscriptionFormComponent},
+  {path:'', redirectTo:'home', pathMatch: 'full'},
+  {path:'**', redirectTo:'home',pathMatch: 'full'},
 ];

@@ -6,6 +6,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthenticationService {
+  // on genere un token non modifiable
   private readonly JWT_TOKEN = 'JWT_TOKEN'
   private loggedUser?: String ;
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false)
