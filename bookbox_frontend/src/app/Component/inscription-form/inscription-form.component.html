@@ -1,6 +1,6 @@
 <div class="responsive-form">
   <p>Sig Up form</p>
-  <form [formGroup]="formGroup" >
+  <form [formGroup]="formGroup" (ngSubmit)="register()" >
     <div >
       <mat-form-field appearance="outline" class="full-width">
         <mat-label> Name </mat-label>
@@ -12,7 +12,7 @@
       </mat-form-field>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>login name</mat-label>
-        <input matInput type="text" formControlName="NomLogin" [class.is-invalid]="formGroup.controls.LoginName.invalid"/>
+        <input matInput type="text" formControlName="LoginName" [class.is-invalid]="formGroup.controls.LoginName.invalid"/>
       </mat-form-field>
       <small class="text-danger" *ngIf="formGroup.controls.LoginName.invalid">
         <ng-container *ngIf="formGroup.controls.LoginName.hasError('required')">
@@ -22,10 +22,22 @@
           the login is too long
         </ng-container>
       </small>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="Email"/>
+      </mat-form-field>
+      <small class="text-danger" *ngIf="formGroup.controls.Email.invalid">
+        <ng-container *ngIf="formGroup.controls.Email.hasError('required')">
+          Email is mandatory
+        </ng-container>
+        <ng-container *ngIf="formGroup.controls.Email.hasError('email')">
+          Enter a valid email
+        </ng-container>
+      </small>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label> Password </mat-label>
-        <input matInput type="password" formControlName="MotDePasse"/>
+        <input matInput type="password" formControlName="Password"/>
       </mat-form-field>
       <small class="text-danger" *ngIf="formGroup.controls.Password.invalid">
         <ng-container *ngIf="formGroup.controls.Password.hasError('required')">
@@ -37,14 +49,14 @@
       </small>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label> Confirm Password </mat-label>
-        <input matInput type="password" formControlName="MotDePasse"/>
+        <input matInput type="password" formControlName="Password_Confirmation"/>
       </mat-form-field>
       <small class="text-danger" *ngIf="formGroup.hasError('passwordMismatch')">
         Passwords do not match — please re-enter the same password.
       </small>
 
     </div>
-    <button mat-button="elevated" class="btn" type="submit" (click)="register()"> Register</button>
+    <button mat-raised-button class="btn" type="submit"> Register</button>
     <mat-error *ngIf="wrongCredentials">  Wrong credential , please try again !</mat-error>
     <i> Already an account ? <a routerLink="/authentication"> log in </a></i>
   </form>
