@@ -8,7 +8,8 @@ import { MatSortModule, MatSort } from '@angular/material/sort';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BoxService } from '../../box-service/box.service';
-import { Box } from '../../Interface/box';
+import { UpdateBoxService } from '../../update-box-service/update-box.service';
+import { Box, CreatedBox } from '../../Interface/box';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -41,7 +42,7 @@ export class BoxComponent implements OnInit, AfterViewInit{
 
   listBoxes!: Box[];
 
-  boxes:any;
+
   dataSource:any;
   display:string[] = ["name","description", "quantity","coordinates","actions"];
 
@@ -53,7 +54,8 @@ export class BoxComponent implements OnInit, AfterViewInit{
 
   constructor(
     private router:Router,
-    private boxService: BoxService
+    private boxService: BoxService,
+    private updateBoxService:UpdateBoxService
   ){}
 
   getAllBoxes(){
@@ -75,14 +77,15 @@ export class BoxComponent implements OnInit, AfterViewInit{
     this.router.navigateByUrl("/add-box");
   }
 
-  handleUpdateBox():void{
+  handleUpdateBox(box:Box):void{
     let conf = confirm("Are you sure you want to update this box ?");
     if (conf){
-      this.router.navigateByUrl("/update-box");
+      //this.router.navigateByUrl("/update-box");
+      this.updateBoxService.redirectToUpdatePageByUrl("/update-box",box);
     }
   }
 
-  handleDeleteBox():void{
+  handleDeleteBox(box:Box):void{
     confirm("Are you sure you want to delete this box ?");
   }
 

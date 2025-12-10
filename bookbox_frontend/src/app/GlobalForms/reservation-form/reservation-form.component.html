@@ -1,0 +1,31 @@
+<form class="reservation-forms" [formGroup]="reservations" >
+
+  <div class="boxes-fields">
+    <mat-form-field color="warn" class="reservation-form-field">
+      <mat-label>Place</mat-label>
+      <mat-select formControlName="place" required placeholder="Select a placer">
+        @for(box of boxList; track box.boxId){
+          <mat-option [value]="box.name">{{box.name}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field color="warn" class="reservation-form-field">
+      <mat-label>User</mat-label>
+      <mat-select formControlName="user" required placeholder="Select a user">
+        <mat-option [value]="1">User1</mat-option>
+        <mat-option [value]="2">User2</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+
+    <mat-form-field color="warn" class="reservation-form-field">
+      <mat-label>Reserved Quantity</mat-label>
+      <input formControlName="reservedQuantity" type="number" step="1" min="0" required matInput>
+    </mat-form-field>
+  </div>
+
+
+
+
+</form>
