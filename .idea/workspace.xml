@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bookbox_frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/box-form/box-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/box-form/box-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
