@@ -47,7 +47,8 @@ export class ReservationComponent implements AfterViewInit, OnInit{
   @ViewChild(MatSort) sort! : MatSort;
 
   constructor(
-    private reservationService: ReservationService
+    private reservationService: ReservationService,
+    private router: Router
   ){}
 
   getAllReservation(){
@@ -67,11 +68,29 @@ export class ReservationComponent implements AfterViewInit, OnInit{
 
   }
 
-  handleAddReservation(){}
+  handleAddReservation(){
+    const conf = confirm("Do you want to add a new reservation ?");
 
-  handleUpdateReservation(element:any){}
+    if(conf){
+      this.router.navigateByUrl("/add-reservation");
+    }
+  }
 
-  handleDeleteReservation(element:any){}
+  handleUpdateReservation(element:any){
+    const conf = confirm("Do you want to update this reservation ?");
+
+    if(conf){
+      alert("Updated !");
+    }
+  }
+
+  handleDeleteReservation(element:any){
+    const conf = confirm("Do you want to delete this reservation ?");
+
+    if(conf){
+      alert("Deleted !");
+    }
+  }
 
   ngOnInit(){
     this.dataSource = new MatTableDataSource<Reservation>([]);
