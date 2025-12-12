@@ -13,8 +13,10 @@
     <mat-form-field color="warn" class="reservation-form-field">
       <mat-label>User</mat-label>
       <mat-select formControlName="user" required placeholder="Select a user">
-        <mat-option [value]="1">User1</mat-option>
-        <mat-option [value]="2">User2</mat-option>
+        @for(user of userList; track user.userId){
+        <mat-option [value]="user.email">{{user.name}}</mat-option>
+        }
+
       </mat-select>
 
     </mat-form-field>
