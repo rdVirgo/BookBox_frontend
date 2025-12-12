@@ -19,6 +19,7 @@ export class AddReservationComponent implements OnInit, AfterViewInit{
   reservationFormComponent!:ReservationFormComponent;
 
   createReservation(){
+
     const boxFullName = this.reservationFormComponent.getAllInputValues().get("place")?.value;
     const userFullName = this.reservationFormComponent.getAllInputValues().get("user")?.value;
     const reservedQuantity = this.reservationFormComponent.getAllInputValues().get("reservedQuantity")?.value;

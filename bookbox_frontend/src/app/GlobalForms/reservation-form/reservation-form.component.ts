@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
 import { BoxService } from '../../box-service/box.service';
 import { Box } from '../../Interface/box';
+import { UserService } from '../../user-service/user.service';
 
 
 
@@ -30,6 +31,7 @@ import { Box } from '../../Interface/box';
 export class ReservationFormComponent implements OnInit{
 
   boxList!: Box[];
+  userList!: any[];
 
   reservations = new FormGroup({
    place: new FormControl<string | null >(null, [Validators.required]),
@@ -39,7 +41,8 @@ export class ReservationFormComponent implements OnInit{
  });
 
   constructor(
-    private boxService:BoxService
+    private boxService:BoxService,
+    private userService : UserService
   ){
 
   }
@@ -64,9 +67,23 @@ export class ReservationFormComponent implements OnInit{
 
   }
 
+  getAllUser(){
+      this.userService.getAllUser().subscribe({
+        next : rest => {
+          this.userList = rest;
+        },
+        error : err => {
+          console.log(err);
+        }
+      });
+
+    }
+
   ngOnInit(): void{
     this.boxList = [];
+    this.userList = [];
     this.getAllBoxes();
+    this.getAllUser();
   }
 
 }
