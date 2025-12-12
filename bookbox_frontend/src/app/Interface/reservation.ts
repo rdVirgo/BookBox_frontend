@@ -8,3 +8,8 @@ export interface Reservation {
   user: User;
   reservationNb: number;
 }
+
+export interface CreatedReservation {
+  reservationId:ReservationId;
+  reservationNb: number;
+}
