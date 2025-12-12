@@ -14,7 +14,7 @@
       <mat-label>User</mat-label>
       <mat-select formControlName="user" required placeholder="Select a user">
         @for(user of userList; track user.userId){
-        <mat-option [value]="user.email">{{user.name}}</mat-option>
+        <mat-option [value]="user.email">{{user.name}} {{user.surname}}</mat-option>
         }
 
       </mat-select>

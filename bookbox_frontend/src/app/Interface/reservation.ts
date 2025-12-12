@@ -1,6 +1,10 @@
+import { User } from './user';
+import { ReservationId } from './reservation-id';
+import { Box, CreatedBox } from './box';
 
 export interface Reservation {
-  username : string;
-  boxname: string;
-  ReservationNb: number;
+  reservationId:ReservationId;
+  box : Box;
+  user: User;
+  reservationNb: number;
 }
