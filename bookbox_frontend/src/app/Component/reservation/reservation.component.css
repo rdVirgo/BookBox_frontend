@@ -23,7 +23,7 @@
   margin-top:15px;
 }
 
-.load-reservation-buttons > .update-box{
+.load-reservation-buttons > .update-reservation{
   background-color:#037343;
   margin-right:10px;
   border-radius:50px;
@@ -39,7 +39,7 @@
   height:40px;
 }
 
-.load-reservation-buttons > .delete-box{
+.load-reservation-buttons > .delete-reservation{
   background-color:#9c060e;
   margin-left:10px;
   border-radius:50px;

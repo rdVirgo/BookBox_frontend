@@ -9,6 +9,8 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservationService } from '../../reservation-service/reservation.service';
+import { Reservation } from '../../Interface/reservation';
 
 @Component({
   selector: 'app-reservation',
@@ -36,13 +38,30 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class ReservationComponent implements AfterViewInit, OnInit{
 
-  listReservation:any = []
+  listReservation!: Reservation[];
 
   dataSource:any;
   display:string[] = ["place","user", "quantity","actions"];
 
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
+
+  constructor(
+    private reservationService: ReservationService
+  ){}
+
+  getAllReservation(){
+    this.reservationService.getAllReservation().subscribe({
+      next : rest => {
+        this.listReservation = rest;
+
+        this.dataSource.data = this.listReservation;
+      },
+      error : err => {
+        console.log(err);
+      }
+    });
+  }
 
   filterReservation(event:Event){
 
@@ -54,9 +73,16 @@ export class ReservationComponent implements AfterViewInit, OnInit{
 
   handleDeleteReservation(element:any){}
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.dataSource = new MatTableDataSource<Reservation>([]);
+    this.listReservation = [];
+    this.getAllReservation();
+  }
 
-  ngAfterViewInit(){}
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
 
 
 }
