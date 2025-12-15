@@ -5,7 +5,7 @@
       <mat-label>Place</mat-label>
       <mat-select formControlName="place" required placeholder="Select a placer">
         @for(box of boxList; track box.boxId){
-          <mat-option [value]="box.name">{{box.name}}</mat-option>
+          <mat-option [value]="box.boxId">{{box.name}}</mat-option>
         }
       </mat-select>
     </mat-form-field>
@@ -13,8 +13,10 @@
     <mat-form-field color="warn" class="reservation-form-field">
       <mat-label>User</mat-label>
       <mat-select formControlName="user" required placeholder="Select a user">
-        <mat-option [value]="1">User1</mat-option>
-        <mat-option [value]="2">User2</mat-option>
+        @for(user of userList; track user.userId){
+        <mat-option [value]="user.userId">{{user.name}} {{user.surname}}</mat-option>
+        }
+
       </mat-select>
 
     </mat-form-field>

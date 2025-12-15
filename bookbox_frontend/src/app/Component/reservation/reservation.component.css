@@ -1,0 +1,50 @@
+.title{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.title mat-card-title{
+  color:#e00dc4;
+  font-family:Georgia, Arial;
+  font-size:50px;
+}
+
+.title mat-card-subtitle{
+  color:#a8631e;
+  text-align:center;
+  margin-top:10px;
+}
+
+.nav-reservation{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+}
+
+.load-reservation-buttons > .update-reservation{
+  background-color:#037343;
+  margin-right:10px;
+  border-radius:50px;
+  width:100px;
+  height:40px;
+}
+
+.add-reservation{
+  background-color:#08c0c9;
+  margin-right:10px;
+  border-radius:50px;
+  width:200px;
+  height:40px;
+}
+
+.load-reservation-buttons > .delete-reservation{
+  background-color:#9c060e;
+  margin-left:10px;
+  border-radius:50px;
+  width:100px;
+  height:40px;
+}
+
+
