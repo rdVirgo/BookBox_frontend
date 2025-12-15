@@ -7,8 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
+import {MapComponent} from "../Component/map/map.component";
 
 
 @Component({
@@ -23,7 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatListModule,
     RouterOutlet,
     RouterLink,
-    HttpClientModule
+    HttpClientModule,
+    MapComponent
   ],
   templateUrl: './initial-page.component.html',
   styleUrl: './initial-page.component.css'

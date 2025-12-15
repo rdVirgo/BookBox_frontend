@@ -12,6 +12,7 @@ import { ConnexionFormComponent} from './Component/connexion-form/connexion-form
 import { BoxFormComponent} from './GlobalForms/box-form/box-form.component';
 import { UpdateBoxComponent} from './UpdateElementComponent/update-box/update-box.component';
 import {InscriptionFormComponent} from "./Component/inscription-form/inscription-form.component";
+import {MapComponent} from "./Component/map/map.component";
 
 
 export const routes: Routes = [
@@ -28,6 +29,7 @@ export const routes: Routes = [
   { path:'box-form', component:BoxFormComponent},
   { path:'update-box', component:UpdateBoxComponent},
   { path:'SignIn', component:InscriptionFormComponent},
+  { path:'Map',component:MapComponent},
   {path:'', redirectTo:'home', pathMatch: 'full'},
   {path:'**', redirectTo:'home',pathMatch: 'full'}
 
