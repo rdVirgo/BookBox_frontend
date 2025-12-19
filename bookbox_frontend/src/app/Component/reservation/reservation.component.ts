@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservationService } from '../../reservation-service/reservation.service';
+import { UpdateReservationService } from '../../update-reservation-service/update-reservation.service';
 import { Reservation } from '../../Interface/reservation';
 
 @Component({
@@ -48,7 +49,8 @@ export class ReservationComponent implements AfterViewInit, OnInit{
 
   constructor(
     private reservationService: ReservationService,
-    private router: Router
+    private router: Router,
+    private updateReservationService: UpdateReservationService
   ){}
 
   getAllReservation(){
@@ -76,11 +78,11 @@ export class ReservationComponent implements AfterViewInit, OnInit{
     }
   }
 
-  handleUpdateReservation(element:any){
+  handleUpdateReservation(reservation:Reservation){
     const conf = confirm("Do you want to update this reservation ?");
 
     if(conf){
-      alert("Updated !");
+      this.updateReservationService.redirectToUpdatePageByUrl("/update-reservation",reservation);
     }
   }
 
