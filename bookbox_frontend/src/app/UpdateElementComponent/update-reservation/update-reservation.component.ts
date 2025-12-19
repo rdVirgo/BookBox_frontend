@@ -1,8 +1,9 @@
-import { OnInit, AfterViewInit, Component } from '@angular/core';
+import { OnInit, AfterViewInit, ViewChild, Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import { ReservationFormComponent } from '../../GlobalForms/reservation-form/reservation-form.component';
 import { UpdateReservationService } from '../../update-reservation-service/update-reservation.service';
 import { Reservation } from '../../Interface/reservation';
+
 
 @Component({
   selector: 'app-update-reservation',
@@ -17,6 +18,9 @@ import { Reservation } from '../../Interface/reservation';
 export class UpdateReservationComponent implements OnInit, AfterViewInit{
 
   reservationToUpdate!: Reservation;
+
+  @ViewChild(ReservationFormComponent)
+  reservationFormComponent!:ReservationFormComponent;
 
 
   constructor(
@@ -33,7 +37,15 @@ export class UpdateReservationComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(){
-
+    if (this.reservationToUpdate){
+      setTimeout(()=>{
+        this.reservationFormComponent?.getAllInputValues().patchValue({
+          place: this.reservationToUpdate.box.boxId,
+          user: this.reservationToUpdate.user.userId,
+          reservedQuantity: this.reservationToUpdate.reservationNb
+        });
+      });
+    }
   }
 
 }
