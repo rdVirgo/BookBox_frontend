@@ -86,7 +86,13 @@ export class BoxComponent implements OnInit, AfterViewInit{
   }
 
   handleDeleteBox(box:Box):void{
-    confirm("Are you sure you want to delete this box ?");
+    const conf = confirm("Are you sure you want to delete this box ?");
+    if(conf){
+      this.boxService.deleteBox(box.boxId).subscribe({
+        next: () => alert("Box is delete."),
+        error: err => alert('Error : ' + err.message)
+      })
+    }
   }
 
   filterBox(event: Event){
