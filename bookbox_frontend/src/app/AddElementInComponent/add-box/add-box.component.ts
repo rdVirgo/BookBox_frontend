@@ -47,7 +47,7 @@ export class AddBoxComponent implements OnInit, AfterViewInit{
               alert("A new box was created !");
             },
             error: (err) =>{
-              alert("Error while creating a box. Make sure you are provided all the required information.");
+              alert("Error while creating a box. Make sure you have provided all the required information.");
             }
           });
 

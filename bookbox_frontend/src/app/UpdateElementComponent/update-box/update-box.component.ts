@@ -38,6 +38,8 @@ export class UpdateBoxComponent implements OnInit, AfterViewInit {
     const latitudeBox = this.boxFormComponent?.getAllInputValues().get("boxLatitude")?.value;
     const longitudeBox = this.boxFormComponent?.getAllInputValues().get("boxLongitude")?.value;
 
+    alert("Value : " + latitudeBox + longitudeBox);
+
     const box: CreatedBox = {
       name:nameBox,
       quantity:quantityBox,
@@ -54,7 +56,7 @@ export class UpdateBoxComponent implements OnInit, AfterViewInit {
               alert("A box was successfully updated !");
             },
             error: (err) =>{
-              alert("Error while creating a box. Make sure you are provided all the required information.");
+              alert("Error while updating a box. Make sure you have provided all the required information.");
             }
           });
 
