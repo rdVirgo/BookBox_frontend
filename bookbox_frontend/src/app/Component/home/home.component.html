@@ -13,6 +13,7 @@
       <h1>
         WELCOME ON CAPGEMINI PROJECT
       </h1>
+       <h2 *ngIf="username">Hello {{ username }} </h2>
       <button (click)="goToLoginPage()" mat-raised-button  color="primary">Go to login page</button>
     </div>
   </main>

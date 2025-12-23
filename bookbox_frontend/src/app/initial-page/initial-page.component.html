@@ -49,13 +49,15 @@
 
     <span class="spacer"></span>
 
-    <button class="login-button" mat-button routerLink="/authentication">Login</button>
+    <!-- span *ngIf="isAuthenticated">Hello {{ username }}</span>!-->
+    <button *ngIf="!isAuthenticated" mat-button routerLink="/authentication">Login</button>
+    <button *ngIf="isAuthenticated" mat-button (click)="logout()">Sign Out</button>
+
   </mat-toolbar>
 
   <div class="drawer">
     <router-outlet></router-outlet>
   </div>
-
 
   <footer class="footer">
     <div class="footer-container">
