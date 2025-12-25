@@ -4,7 +4,7 @@ import { BoxFormComponent } from '../../GlobalForms/box-form/box-form.component'
 import { Box, CreatedBox } from '../../Interface/box';
 import { UpdateBoxService } from '../../update-box-service/update-box.service';
 import {Coordinates} from "../../Interface/coordinates";
-import { BoxService } from '../../box-service/box.service';
+import { BoxService } from '../../service/box-service/box.service';
 
 @Component({
   selector: 'app-update-box',
