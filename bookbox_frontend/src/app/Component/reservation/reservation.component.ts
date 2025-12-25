@@ -9,6 +9,10 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+//import { ReservationService } from '../../reservation-service/reservation.service';
+import { UpdateReservationService } from '../../update-reservation-service/update-reservation.service';
+import { ReservationService } from '../../service/reservation-service/reservation.service';
+import { Reservation } from '../../Interface/reservation';
 
 @Component({
   selector: 'app-reservation',
@@ -36,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class ReservationComponent implements AfterViewInit, OnInit{
 
-  listReservation:any = []
+  listReservation!: Reservation[];
 
   dataSource:any;
   display:string[] = ["place","user", "quantity","actions"];
@@ -44,19 +48,63 @@ export class ReservationComponent implements AfterViewInit, OnInit{
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
 
+  constructor(
+    private reservationService: ReservationService,
+    private router: Router,
+    private updateReservationService: UpdateReservationService
+  ){}
+
+  getAllReservation(){
+    this.reservationService.getAllReservation().subscribe({
+      next : rest => {
+        this.listReservation = rest;
+
+        this.dataSource.data = this.listReservation;
+      },
+      error : err => {
+        console.log(err);
+      }
+    });
+  }
+
   filterReservation(event:Event){
 
   }
 
-  handleAddReservation(){}
+  handleAddReservation(){
+    const conf = confirm("Do you want to add a new reservation ?");
 
-  handleUpdateReservation(element:any){}
+    if(conf){
+      this.router.navigateByUrl("/add-reservation");
+    }
+  }
 
-  handleDeleteReservation(element:any){}
+  handleUpdateReservation(reservation:Reservation){
+    const conf = confirm("Do you want to update this reservation ?");
 
-  ngOnInit(){}
+    if(conf){
+      this.updateReservationService.redirectToUpdatePageByUrl("/update-reservation",reservation);
+    }
+  }
 
-  ngAfterViewInit(){}
+  handleDeleteReservation(element:any){
+    const conf = confirm("Do you want to delete this reservation ?");
+
+    if(conf){
+      alert("Deleted !");
+    }
+  }
+
+  ngOnInit(){
+    this.dataSource = new MatTableDataSource<Reservation>([]);
+    this.listReservation = [];
+    this.getAllReservation();
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
 
 
 }

@@ -7,7 +7,7 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { BoxService } from '../../box-service/box.service';
+import { BoxService } from '../../service/box-service/box.service';
 import { UpdateBoxService } from '../../update-box-service/update-box.service';
 import { Box, CreatedBox } from '../../Interface/box';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
@@ -20,8 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     MatButtonModule,
     MatCardModule,
-    NgForOf,
-    NgIf,
     MatTableModule,
     MatPaginator,
     MatPaginatorModule,
@@ -30,8 +28,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatInput,
     MatInputModule,
     MatFormFieldModule,
-    RouterOutlet,
-    RouterLink,
     HttpClientModule,
     CommonModule
   ],
@@ -86,7 +82,13 @@ export class BoxComponent implements OnInit, AfterViewInit{
   }
 
   handleDeleteBox(box:Box):void{
-    confirm("Are you sure you want to delete this box ?");
+    const conf = confirm("Are you sure you want to delete this box ?");
+    if(conf){
+      this.boxService.deleteBox(box.boxId).subscribe({
+        next: () => alert("Box is delete."),
+        error: err => alert('Error : ' + err.message)
+      })
+    }
   }
 
   filterBox(event: Event){
@@ -108,8 +110,6 @@ export class BoxComponent implements OnInit, AfterViewInit{
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-
-
 
 
 }

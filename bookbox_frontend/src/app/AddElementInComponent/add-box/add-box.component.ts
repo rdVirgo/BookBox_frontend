@@ -1,7 +1,7 @@
 import { AfterViewInit, ViewChild, OnInit, Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import { BoxFormComponent } from '../../GlobalForms/box-form/box-form.component';
-import { BoxService } from '../../box-service/box.service';
+import { BoxService } from '../../service/box-service/box.service';
 import { Box, CreatedBox } from '../../Interface/box';
 
 @Component({
@@ -47,7 +47,7 @@ export class AddBoxComponent implements OnInit, AfterViewInit{
               alert("A new box was created !");
             },
             error: (err) =>{
-              alert("Error while creating a box. Make sure you are provided all the required information.");
+              alert("Error while creating a box. Make sure you have provided all the required information.");
             }
           });
 

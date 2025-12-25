@@ -1,1 +1,40 @@
-<p>add-user works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add User</title>
+</head>
+<!--<body>
+  <main>
+    <div>
+      <div>
+        <app-inscription-form></app-inscription-form>
+      </div>
+    </div>
+  </main>
+
+  <title>Users</title>
+</head>-->
+<body>
+<main>
+  <div class="users-content">
+    <div class="users-title">
+      <h1>Create new User</h1>
+    </div>
+
+    <div>
+      <app-user-form></app-user-form>
+    </div>
+
+    <div class="users-button">
+      <button (click)="createUser()" mat-raised-button color="primary">Create</button>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

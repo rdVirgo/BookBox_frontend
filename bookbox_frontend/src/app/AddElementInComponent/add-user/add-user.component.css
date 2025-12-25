@@ -1,0 +1,26 @@
+.users-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.users-content h1 {
+  text-align: center;
+  font-family: Georgia, Arial;
+  font-size: 32px;
+  font-weight: bold;
+  color: #043e78;
+  margin-bottom: 30px;
+}
+
+
+.users-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.users-button button {
+  width: 150px;
+  font-weight: bold;
+}

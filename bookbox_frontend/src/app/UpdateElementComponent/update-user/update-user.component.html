@@ -1,1 +1,28 @@
-<p>update-user works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Update User</title>
+</head>
+<body>
+<main>
+  <div>
+    <div class="box-title">
+      <h1>Update an old User to a new one</h1>
+    </div>
+
+    <div>
+      <app-user-form></app-user-form>
+    </div>
+
+    <div class="box-button">
+      <button (click)="updateUser()" class="box-mat-button" mat-raised-button color="primary">Update</button>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

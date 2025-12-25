@@ -1,12 +1,51 @@
-import { Component } from '@angular/core';
+import { OnInit, AfterViewInit, ViewChild, Component } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import { ReservationFormComponent } from '../../GlobalForms/reservation-form/reservation-form.component';
+import { UpdateReservationService } from '../../update-reservation-service/update-reservation.service';
+import { Reservation } from '../../Interface/reservation';
+
 
 @Component({
   selector: 'app-update-reservation',
   standalone: true,
-  imports: [],
+  imports: [
+    ReservationFormComponent,
+    MatButtonModule
+  ],
   templateUrl: './update-reservation.component.html',
   styleUrl: './update-reservation.component.css'
 })
-export class UpdateReservationComponent {
+export class UpdateReservationComponent implements OnInit, AfterViewInit{
+
+  reservationToUpdate!: Reservation;
+
+  @ViewChild(ReservationFormComponent)
+  reservationFormComponent!:ReservationFormComponent;
+
+
+  constructor(
+    private updateReservationService: UpdateReservationService
+  ){}
+
+
+  updateReservation(){
+    alert("Reservation to update nb : " + this.reservationToUpdate.reservationNb);
+  }
+
+  ngOnInit(){
+    this.reservationToUpdate = this.updateReservationService.getReservationToUpdate();
+  }
+
+  ngAfterViewInit(){
+    if (this.reservationToUpdate){
+      setTimeout(()=>{
+        this.reservationFormComponent?.getAllInputValues().patchValue({
+          place: this.reservationToUpdate.box.boxId,
+          user: this.reservationToUpdate.user.userId,
+          reservedQuantity: this.reservationToUpdate.reservationNb
+        });
+      });
+    }
+  }
 
 }

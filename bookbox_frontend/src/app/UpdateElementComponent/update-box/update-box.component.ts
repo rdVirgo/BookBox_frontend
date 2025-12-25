@@ -4,6 +4,7 @@ import { BoxFormComponent } from '../../GlobalForms/box-form/box-form.component'
 import { Box, CreatedBox } from '../../Interface/box';
 import { UpdateBoxService } from '../../update-box-service/update-box.service';
 import {Coordinates} from "../../Interface/coordinates";
+import { BoxService } from '../../service/box-service/box.service';
 
 @Component({
   selector: 'app-update-box',
@@ -17,16 +18,63 @@ import {Coordinates} from "../../Interface/coordinates";
 })
 export class UpdateBoxComponent implements OnInit, AfterViewInit {
 
-  constructor(private updateBoxService:UpdateBoxService){}
+  constructor(
+    private updateBoxService:UpdateBoxService,
+    private boxService: BoxService
+  ){}
 
   @ViewChild(BoxFormComponent)
   boxFormComponent!:BoxFormComponent;
+
+
 
   boxToUpdate!:Box;
 
   updateBox(){
 
+    const nameBox = this.boxFormComponent?.getAllInputValues().get("boxName")?.value;
+    const descriptionBox = this.boxFormComponent?.getAllInputValues().get("boxDescription")?.value;
+    const quantityBox = this.boxFormComponent?.getAllInputValues().get("boxQuantity")?.value;
+    const latitudeBox = this.boxFormComponent?.getAllInputValues().get("boxLatitude")?.value;
+    const longitudeBox = this.boxFormComponent?.getAllInputValues().get("boxLongitude")?.value;
+
+    alert("Value : " + latitudeBox + longitudeBox);
+
+    const box: CreatedBox = {
+      name:nameBox,
+      quantity:quantityBox,
+      description:descriptionBox,
+      coordinates:{
+        latitude:latitudeBox,
+        longitude:longitudeBox
+      }
+    };
+
+    if (this.isValidLatitude(latitudeBox) && this.isValidLongitude(longitudeBox)){
+      this.boxService.updateBox(this.boxToUpdate?.boxId, box).subscribe({
+            next: (boxes) =>{
+              alert("A box was successfully updated !");
+            },
+            error: (err) =>{
+              alert("Error while updating a box. Make sure you have provided all the required information.");
+            }
+          });
+
+          this.boxFormComponent.resetForm();
+    }else{
+      alert("Provide correct value for latitude and/or longitude");
+    }
   }
+
+  private isValidLatitude(latitude:number):boolean{
+    return (latitude >= -90 && latitude <= 90);
+  }
+
+  private isValidLongitude(longitude:number):boolean{
+    return (longitude >= -180 && longitude <= 180);
+  }
+
+
 
   ngOnInit(){
 
@@ -36,7 +84,7 @@ export class UpdateBoxComponent implements OnInit, AfterViewInit {
     this.boxToUpdate = this.updateBoxService.getBoxToUpdate();
 
     let box:Box = {
-      boxId: this.boxToUpdate.boxId,
+      boxId: this.boxToUpdate?.boxId,
       name : "",
       quantity : 0,
       description : "",

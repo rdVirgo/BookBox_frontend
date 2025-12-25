@@ -11,7 +11,10 @@ import { AddUserComponent } from './AddElementInComponent/add-user/add-user.comp
 import { ConnexionFormComponent} from './Component/connexion-form/connexion-form.component';
 import { BoxFormComponent} from './GlobalForms/box-form/box-form.component';
 import { UpdateBoxComponent} from './UpdateElementComponent/update-box/update-box.component';
+import { UpdateReservationComponent} from './UpdateElementComponent/update-reservation/update-reservation.component';
 import {InscriptionFormComponent} from "./Component/inscription-form/inscription-form.component";
+import {ReservationFormComponent} from "./GlobalForms/reservation-form/reservation-form.component";
+import {MapComponent} from "./Component/map/map.component";
 
 
 export const routes: Routes = [
@@ -28,6 +31,9 @@ export const routes: Routes = [
   { path:'box-form', component:BoxFormComponent},
   { path:'update-box', component:UpdateBoxComponent},
   { path:'SignIn', component:InscriptionFormComponent},
+  { path: 'reservation-form', component: ReservationFormComponent},
+  { path: 'update-reservation', component: UpdateReservationComponent},
+  { path:'Map',component:MapComponent},
   {path:'', redirectTo:'home', pathMatch: 'full'},
   {path:'**', redirectTo:'home',pathMatch: 'full'}
 
