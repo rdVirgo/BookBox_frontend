@@ -5,9 +5,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
-import { BoxService } from '../../box-service/box.service';
+import { BoxService } from '../../service/box-service/box.service';
 import { Box } from '../../Interface/box';
-import { UserService } from '../../user-service/user.service';
+import { UserService } from "../../service/User-service/user.service";
+import {User} from "../../Interface/user";
 
 
 
@@ -22,8 +23,7 @@ import { UserService } from '../../user-service/user.service';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    NgForOf,
-    NgIf
+
   ],
   templateUrl: './reservation-form.component.html',
   styleUrl: './reservation-form.component.css'
@@ -67,17 +67,16 @@ export class ReservationFormComponent implements OnInit{
 
   }
 
-  getAllUser(){
-      this.userService.getAllUser().subscribe({
-        next : rest => {
-          this.userList = rest;
-        },
-        error : err => {
-          console.log(err);
-        }
-      });
-
-    }
+  getAllUser() {
+    this.userService.getAllUsers().subscribe({
+      next: (rest: User[]) => {
+        this.userList = rest;
+      },
+      error: (err: any) => {
+        console.error(err);
+      }
+    });
+  }
 
   ngOnInit(): void{
     this.boxList = [];

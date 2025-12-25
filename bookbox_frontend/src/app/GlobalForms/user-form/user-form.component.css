@@ -1,0 +1,9 @@
+.users-fields{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:600px;
+  height:300px;
+  gap:10px;
+  margin-top:50px;
+}

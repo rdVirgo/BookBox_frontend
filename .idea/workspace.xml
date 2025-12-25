@@ -5,8 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/ResponseUser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-box/add-box.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-box/add-box.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-box/add-box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-box/add-box.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-reservation/add-reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/connexion-form/connexion-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/connexion-form/connexion-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/box-form/box-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/box-form/box-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/reservation-form/reservation-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/reservation-form/reservation-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/box-service/box.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/box-service/box.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/box-service/box.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/box-service/box.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/initial-page/initial-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/initial-page/initial-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/initial-page/initial-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/initial-page/initial-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/reservation-service/reservation.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/reservation-service/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/service/AuthenticationService/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/AuthenticationService/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/user-service/user.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/user-service/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,33 +68,64 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="366lO828tzrKNWoz0ZkVXm4okML" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;cmdBranch&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/cmdmac/Documents/POLYTECH/CapGeminy/bookbox/bookbox_frontend/src/Images&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MERABTENE/Desktop/4A_polytech/bookbox_frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\MERABTENE\\Desktop\\4A_polytech\\bookbox_frontend\\bookbox_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bookbox_frontend/src/Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bookbox_frontend/src/app/Services" />
-      <recent name="$PROJECT_DIR$/bookbox_frontend" />
-      <recent name="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent" />
-      <recent name="$PROJECT_DIR$/bookbox_frontend/src/app/Component" />
+      <recent name="C:\Users\MERABTENE\Desktop\4A_polytech\bookbox_frontend\bookbox_frontend\src\app\service" />
+      <recent name="C:\Users\MERABTENE\Desktop\4A_polytech\bookbox_frontend\bookbox_frontend\src\app\GlobalForms\user-form" />
+      <recent name="C:\Users\MERABTENE\Desktop\4A_polytech\bookbox_frontend\bookbox_frontend\src\app\service\User-service" />
+      <recent name="C:\Users\MERABTENE\Desktop\4A_polytech\bookbox_frontend\bookbox_frontend\src\app\service\CoordinatesService" />
+      <recent name="C:\Users\MERABTENE\Desktop\4A_polytech\bookbox_frontend\bookbox_frontend\src\app\Component" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="bookbox_frontend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="bookbox_frontend" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="" />
@@ -70,8 +133,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764334866116</updated>
+      <workItem from="1765702949415" duration="2548000" />
+      <workItem from="1765796454451" duration="2223000" />
+      <workItem from="1765893744323" duration="1251000" />
+      <workItem from="1765999014781" duration="3114000" />
+      <workItem from="1766133750956" duration="379000" />
+      <workItem from="1766148865474" duration="4760000" />
+      <workItem from="1766236756612" duration="9438000" />
+      <workItem from="1766325610100" duration="6459000" />
+      <workItem from="1766337149669" duration="1850000" />
+      <workItem from="1766401352094" duration="18485000" />
+      <workItem from="1766525093431" duration="6647000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
@@ -86,5 +163,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bookbox_frontend/src/app/user-service/user.service.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/reservation-form/reservation-form.component.ts</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

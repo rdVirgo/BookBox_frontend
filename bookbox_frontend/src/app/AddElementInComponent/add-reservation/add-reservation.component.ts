@@ -1,7 +1,7 @@
 import { AfterViewInit, ViewChild, OnInit, Component } from '@angular/core';
 import { ReservationFormComponent } from '../../GlobalForms/reservation-form/reservation-form.component';
 import {MatButtonModule} from '@angular/material/button';
-import {ReservationService} from '../../reservation-service/reservation.service';
+import {ReservationService} from '../../service/reservation-service/reservation.service';
 import { CreatedReservation } from '../../Interface/reservation';
 
 

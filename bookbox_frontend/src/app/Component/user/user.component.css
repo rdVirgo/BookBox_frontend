@@ -1,0 +1,48 @@
+.nav-user{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+}
+
+.title{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.load-user-buttons > .update-user{
+  background-color:#037343;
+  margin-right:10px;
+  border-radius:50px;
+  width:100px;
+  height:40px;
+}
+
+.add-user{
+  background-color:#08c0c9;
+  margin-right:10px;
+  border-radius:50px;
+  width:150px;
+  height:40px;
+}
+
+.load-user-buttons > .delete-user{
+  background-color:#9c060e;
+  margin-left:10px;
+  border-radius:50px;
+  width:100px;
+  height:40px;
+}
+
+.title mat-card-title{
+  color:red;
+  font-family:Georgia, Arial;
+  font-size:50px;
+}
+
+.title mat-card-subtitle{
+  color:blue;
+  text-align:center;
+  margin-top:10px;
+}

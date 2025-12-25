@@ -1,36 +1,53 @@
-import {inject, Injectable} from '@angular/core';
-import {BehaviorSubject, Observable, tap} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import { inject, Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  // on genere un token non modifiable
-  private readonly JWT_TOKEN = 'JWT_TOKEN'
-  private loggedUser?: String ;
-  private isAuthenticatedSubject = new BehaviorSubject<boolean>(false)
 
-  private http= inject(HttpClient);
-  constructor() { }
+  private readonly JWT_TOKEN = 'JWT_TOKEN';
+  private readonly USERNAME_KEY = 'USERNAME';
 
-  login(user:{
-    username : string , password : string
-  }): Observable<any>{
-    return this.http.post('/api/login',user).pipe(
-      tap(tokens=>this.doLoginUser(user.username,tokens))
-    )
+  private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasToken());
+  private http = inject(HttpClient);
+  private router = inject(Router);
+
+  constructor() {}
+
+  login(user: { username: string; password: string }): Observable<any> {
+    return this.http.post<any>('/api/auth/login', user).pipe(
+      tap(response => this.doLoginUser(response))
+    );
   }
-  private doLoginUser(username : string , tokens : any){
-    this.loggedUser=username;
-    this.storeJwtToken(tokens.jwt);
-    this.isAuthenticatedSubject=tokens;
+
+  private doLoginUser(response: any) {
+    // Backend renvoie: token, username, role
+    localStorage.setItem(this.JWT_TOKEN, response.token);
+    localStorage.setItem(this.USERNAME_KEY, response.username);
+
+    this.isAuthenticatedSubject.next(true);
+
+    // here we do the redirection after log in
+    this.router.navigate(['/home']);
   }
-  private storeJwtToken(jwt : string){
-    localStorage.setItem(this.JWT_TOKEN,jwt);
-  }
-  logout(){
+
+  logout() {
     localStorage.removeItem(this.JWT_TOKEN);
+    localStorage.removeItem(this.USERNAME_KEY);
+
     this.isAuthenticatedSubject.next(false);
+    this.router.navigate(['/login']);
+  }
+  getUsername(): string | null {
+    return localStorage.getItem(this.USERNAME_KEY);
+  }
+  private hasToken(): boolean {
+    return !!localStorage.getItem(this.JWT_TOKEN);
+  }
+  isAuthenticatedObservable(): Observable<boolean> {
+    return this.isAuthenticatedSubject.asObservable();
   }
 }

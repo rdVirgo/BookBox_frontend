@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Add User</title>
 </head>
-<body>
+<!--<body>
   <main>
     <div>
       <div>
@@ -15,5 +15,26 @@
       </div>
     </div>
   </main>
+
+  <title>Users</title>
+</head>-->
+<body>
+<main>
+  <div class="users-content">
+    <div class="users-title">
+      <h1>Create new User</h1>
+    </div>
+
+    <div>
+      <app-user-form></app-user-form>
+    </div>
+
+    <div class="users-button">
+      <button (click)="createUser()" mat-raised-button color="primary">Create</button>
+    </div>
+
+  </div>
+</main>
+
 </body>
 </html>

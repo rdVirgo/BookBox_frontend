@@ -14,6 +14,7 @@ import { UpdateBoxComponent} from './UpdateElementComponent/update-box/update-bo
 import { UpdateReservationComponent} from './UpdateElementComponent/update-reservation/update-reservation.component';
 import {InscriptionFormComponent} from "./Component/inscription-form/inscription-form.component";
 import {ReservationFormComponent} from "./GlobalForms/reservation-form/reservation-form.component";
+import {MapComponent} from "./Component/map/map.component";
 
 
 export const routes: Routes = [
@@ -32,6 +33,7 @@ export const routes: Routes = [
   { path:'SignIn', component:InscriptionFormComponent},
   { path: 'reservation-form', component: ReservationFormComponent},
   { path: 'update-reservation', component: UpdateReservationComponent},
+  { path:'Map',component:MapComponent},
   {path:'', redirectTo:'home', pathMatch: 'full'},
   {path:'**', redirectTo:'home',pathMatch: 'full'}
 
