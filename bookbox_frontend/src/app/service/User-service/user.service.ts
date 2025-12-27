@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {User, CreatedUser} from "../../Interface/user";
+import {User, CreatedUser, UpdatedUser} from "../../Interface/user";
 
 
 
@@ -22,5 +22,8 @@ export class UserService {
   }
   deleteUser(iduser: number){
     return this.http.delete<void>(`http://localhost:8080/api/users/${iduser}`);
+  }
+  updateUser(iduser :number ,user : UpdatedUser){
+    return this.http.put<User>(`http://localhost:8080/api/users/${iduser}`,user);
   }
 }

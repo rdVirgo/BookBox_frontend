@@ -14,6 +14,7 @@ import { MatSort, MatSortHeader } from "@angular/material/sort";
 import { UserService } from "../../service/User-service/user.service";
 import { Router } from "@angular/router";
 import {User} from "../../Interface/user";
+import {UpdateUserService} from "../../service/update-user-service/update-user.service";
 
 
 @Component({
@@ -52,6 +53,7 @@ export class UserComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private userService: UserService,
+    private userServiceUpdate : UpdateUserService,
   ) { }
 
   ngOnInit(): void {
@@ -91,7 +93,10 @@ export class UserComponent implements OnInit, AfterViewInit {
     }
   filterUser(event : Event){}
 
-  handleUpdateUser(element :Event) {
+  handleUpdateUser(user :User) {
+    alert("you will modify this user information !");
+    this.userServiceUpdate.redirectToUpdatePageByUrl("/update-user",user);
 
   }
+
 }

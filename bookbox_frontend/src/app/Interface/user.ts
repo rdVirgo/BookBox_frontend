@@ -13,3 +13,10 @@ export interface CreatedUser{
   email: string;
   password : string;
 }
+export interface UpdatedUser{
+  userId:number;
+  name : string;
+  surname: string;
+  username:string;
+  email: string;
+}

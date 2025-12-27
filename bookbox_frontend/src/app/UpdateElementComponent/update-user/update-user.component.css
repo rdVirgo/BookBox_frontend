@@ -1,0 +1,23 @@
+
+.box-title h1{
+  font-family:Georgia;
+  font-size:50px;
+  color:#043e78;
+}
+
+.box-button, .box-title{
+  display:flex;
+  justify-content:center;
+  margin-top:25px;
+
+}
+
+.box-mat-button{
+  width:200px;
+  margin-top:50px;
+}
+.form{
+  margin-left: 310px;
+
+}
+
