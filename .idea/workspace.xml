@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/reservation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/reservation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/MERABTENE/Desktop/4A_polytech/bookbox_frontend",
     "node.js.detected.package.eslint": "true",
@@ -90,14 +87,6 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
