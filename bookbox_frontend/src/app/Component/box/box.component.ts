@@ -76,7 +76,7 @@ export class BoxComponent implements OnInit, AfterViewInit{
   handleUpdateBox(box:Box):void{
     let conf = confirm("Are you sure you want to update this box ?");
     if (conf){
-      //this.router.navigateByUrl("/update-box");
+
       this.updateBoxService.redirectToUpdatePageByUrl("/update-box",box);
     }
   }
@@ -85,7 +85,10 @@ export class BoxComponent implements OnInit, AfterViewInit{
     const conf = confirm("Are you sure you want to delete this box ?");
     if(conf){
       this.boxService.deleteBox(box.boxId).subscribe({
-        next: () => alert("Box is delete."),
+        next: () => {
+          this.getAllBoxes(),
+          alert("Box is deleted.")
+        },
         error: err => alert('Error : ' + err.message)
       })
     }
