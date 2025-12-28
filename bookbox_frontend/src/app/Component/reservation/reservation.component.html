@@ -28,7 +28,7 @@
               <mat-label>
                 Filter Reservation
               </mat-label>
-              <input matInput type="text" placeholder="Filter" (change)="filterReservation($event)">
+              <input matInput type="text" placeholder="Filter" (keyup)="filterReservation($event)">
             </mat-form-field>
 
             <button class="add-reservation" (click)="handleAddReservation()" mat-raised-button color="primary">+ Add Reservation</button>
