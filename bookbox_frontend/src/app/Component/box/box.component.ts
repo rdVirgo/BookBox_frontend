@@ -95,7 +95,9 @@ export class BoxComponent implements OnInit, AfterViewInit{
   }
 
   filterBox(event: Event){
-    alert("You will filterBox");
+    const filtered = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filtered.trim().toLowerCase();
+
   }
 
   ngOnInit():void{

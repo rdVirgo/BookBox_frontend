@@ -67,7 +67,8 @@ export class ReservationComponent implements AfterViewInit, OnInit{
   }
 
   filterReservation(event:Event){
-    alert("You will filterReservation");
+    const filtered = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filtered.trim().toLowerCase();
   }
 
   handleAddReservation(){
@@ -107,6 +108,17 @@ export class ReservationComponent implements AfterViewInit, OnInit{
     this.dataSource = new MatTableDataSource<Reservation>([]);
     this.listReservation = [];
     this.getAllReservation();
+
+    this.dataSource.filterPredicate = (data : Reservation, filter: string)=>{
+      const filtered = filter.trim().toLowerCase();
+
+      return (
+        data.box.name.toLowerCase().includes(filtered) ||
+        data.user.email.toLowerCase().includes(filtered) ||
+        `${data.reservationNb}`.toLowerCase().includes(filtered)
+      );
+    };
+
   }
 
   ngAfterViewInit(){

@@ -91,7 +91,10 @@ export class UserComponent implements OnInit, AfterViewInit {
         }
       })
     }
-  filterUser(event : Event){}
+  filterUser(event : Event){
+    const filtered = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filtered.trim().toLowerCase();
+  }
 
   handleUpdateUser(user :User) {
     alert("you will modify this user information !");

@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/user/user.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +41,6 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="366lO828tzrKNWoz0ZkVXm4okML" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -107,7 +111,7 @@
       <workItem from="1766681101769" duration="2623000" />
       <workItem from="1766799402770" duration="4960000" />
       <workItem from="1766835223231" duration="5547000" />
-      <workItem from="1766955619281" duration="2691000" />
+      <workItem from="1766955619281" duration="600000" />
     </task>
     <servers />
   </component>
