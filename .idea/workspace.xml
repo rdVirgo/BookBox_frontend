@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/reservation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/reservation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/reservation-service/reservation.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
