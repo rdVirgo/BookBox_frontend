@@ -14,8 +14,6 @@ import {AuthenticationService} from "../../service/AuthenticationService/authent
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
-    RouterOutlet,
-    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -23,11 +21,17 @@ import {AuthenticationService} from "../../service/AuthenticationService/authent
 export class HomeComponent implements OnInit {
 
   username?: string | null;
+  isAuthenticated = false;
 
-  constructor(private router : Router, private authService: AuthenticationService) {}
+  constructor(private router: Router, private authService: AuthenticationService) {
+  }
 
   ngOnInit() {
     this.username = this.authService.getUsername();
+
+    this.authService.isAuthenticatedObservable().subscribe((val: boolean) => {
+      this.isAuthenticated = val;
+    });
   }
 
   goToLoginPage():void{
