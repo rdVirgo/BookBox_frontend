@@ -14,16 +14,16 @@ export class UserService {
   constructor(private http : HttpClient) { }
 
   getAllUsers():Observable<User[]>{
-    return this.http.get<User[]>("http://localhost:8080/api/users");
+    return this.http.get<User[]>("/api/users");
   }
 
   createUser(user:CreatedUser):Observable<User>{
-    return this.http.post<User>("http://localhost:8080/api/users",user);
+    return this.http.post<User>("/api/users",user);
   }
   deleteUser(iduser: number){
-    return this.http.delete<void>(`http://localhost:8080/api/users/${iduser}`);
+    return this.http.delete<void>(`/api/users/${iduser}`);
   }
   updateUser(iduser :number ,user : UpdatedUser){
-    return this.http.put<User>(`http://localhost:8080/api/users/${iduser}`,user);
+    return this.http.put<User>(`/api/users/${iduser}`,user);
   }
 }

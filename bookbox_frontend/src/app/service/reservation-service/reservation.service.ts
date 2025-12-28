@@ -13,20 +13,20 @@ export class ReservationService {
   constructor(private http : HttpClient) { }
 
   getAllReservation(): Observable<Reservation[]>{
-    return this.http.get<Reservation[]>("http://localhost:8080/api/reservation");
+    return this.http.get<Reservation[]>("/api/reservation");
   }
 
   createReservation(createReservation:CreatedReservation): Observable<Reservation>{
-    return this.http.post<Reservation>("http://localhost:8080/api/reservation", createReservation);
+    return this.http.post<Reservation>("/api/reservation", createReservation);
   }
 
   updateReservation(reservationIdAndValue:ReservationIdAndValue):Observable<Reservation>{
-    return this.http.put<Reservation>("http://localhost:8080/api/reservation/id", reservationIdAndValue);
+    return this.http.put<Reservation>("/api/reservation/id", reservationIdAndValue);
   }
 
   deleteReservation(id:ReservationId){
     return this.http.delete<void>(
-      "http://localhost:8080/api/reservation/id",
+      "/api/reservation/id",
       {
         body:id
       }

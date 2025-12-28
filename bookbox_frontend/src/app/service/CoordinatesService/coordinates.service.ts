@@ -12,7 +12,7 @@ export class CoordinatesService {
   }
 
   getAllCoordinates(): Observable<Coordinates[]> {
-    return this.http.get<Coordinates[]>("http://localhost:8080/api/coordinates");
+    return this.http.get<Coordinates[]>("/api/coordinates");
   }
 
 }

@@ -13,19 +13,19 @@ export class BoxService {
   constructor(private http : HttpClient) { }
 
   getAllBoxes():Observable<Box[]>{
-    return this.http.get<Box[]>("http://localhost:8080/api/box");
+    return this.http.get<Box[]>("/api/box");
   }
 
   createBox(box:CreatedBox):Observable<Box>{
-    return this.http.post<Box>("http://localhost:8080/api/box",box);
+    return this.http.post<Box>("/api/box",box);
   }
 
   updateBox(id:number, box:CreatedBox):Observable<Box>{
-    return this.http.put<Box>(`http://localhost:8080/api/box/${id}`, box);
+    return this.http.put<Box>(`/api/box/${id}`, box);
   }
 
   deleteBox(id:number){
-    return this.http.delete<void>(`http://localhost:8080/api/box/${id}`);
+    return this.http.delete<void>(`/api/box/${id}`);
   }
 
 }

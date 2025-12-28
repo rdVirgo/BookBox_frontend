@@ -42,7 +42,7 @@ export class AddReservationComponent implements OnInit, AfterViewInit{
         }
         this.reservationService.createReservation(createReservation).subscribe({
           next: (boxes) =>{
-            alert("A new box was created !");
+            alert("A new reservation was created !");
           },
           error: (err) =>{
             alert("Error while creating a box. Make sure you are provided all the required information.");
