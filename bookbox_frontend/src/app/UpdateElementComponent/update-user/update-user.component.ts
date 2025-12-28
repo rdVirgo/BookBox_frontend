@@ -57,7 +57,7 @@ export class UpdateUserComponent implements OnInit, AfterViewInit {
     this.userToUpdate = this.updateUserService.getUserToUpdate();
 
     let user: UpdatedUser = {
-      userId: this.userToUpdate.userId,
+      userId: this.userToUpdate?.userId,
       name: "",
       surname: "",
       username: "",
