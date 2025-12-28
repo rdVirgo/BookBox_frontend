@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden; /* empêche scroll horizontal global */
+  overflow-x: hidden;
 }
 .spacer {
   flex:auto;
