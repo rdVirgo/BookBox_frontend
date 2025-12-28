@@ -20,4 +20,12 @@ export class BoxService {
     return this.http.post<Box>("http://localhost:8080/api/box",box);
   }
 
+  updateBox(id:number, box:CreatedBox):Observable<Box>{
+    return this.http.put<Box>(`http://localhost:8080/api/box/${id}`, box);
+  }
+
+  deleteBox(id:number){
+    return this.http.delete<void>(`http://localhost:8080/api/box/${id}`);
+  }
+
 }

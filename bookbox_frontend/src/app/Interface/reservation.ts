@@ -13,3 +13,8 @@ export interface CreatedReservation {
   reservationId:ReservationId;
   reservationNb: number;
 }
+
+export interface ReservationIdAndValue{
+  reservationId:ReservationId;
+  reservationDTO:CreatedReservation;
+}

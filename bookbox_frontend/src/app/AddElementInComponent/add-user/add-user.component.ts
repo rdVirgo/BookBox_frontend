@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, OnInit, ViewChild, Component } from '@angular/core';
+import { InscriptionFormComponent } from '../../Component/inscription-form/inscription-form.component';
 import { MatButton } from "@angular/material/button";
 import { UserFormComponent } from "../../GlobalForms/user-form/user-form.component";
 import { UserService } from "../../service/User-service/user.service";
@@ -8,6 +9,7 @@ import { CreatedUser } from "../../Interface/user";
   selector: 'app-add-user',
   standalone: true,
   imports: [
+    InscriptionFormComponent,
     MatButton,
     UserFormComponent
   ],

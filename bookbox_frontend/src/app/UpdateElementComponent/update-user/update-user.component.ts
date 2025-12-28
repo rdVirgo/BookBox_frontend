@@ -24,19 +24,19 @@ export class UpdateUserComponent implements OnInit, AfterViewInit {
   constructor(private updateUserService:UpdateUserService, private userService: UserService , private router : Router){}
 
 @ViewChild(UserFormUpdateComponent)
-  userFormupdateComponent!:UserFormUpdateComponent;
+  userFormUpdateComponent!:UserFormUpdateComponent;
 
   userToUpdate!:UpdatedUser;
 
   updateUser(){
-    const form=this.userFormupdateComponent.getAllInputValues();
-    const formvalue=form.value;
+    const form=this.userFormUpdateComponent.getAllInputValues();
+    const formValue=form.value;
     const updatedUser : UpdatedUser = {
-      userId:formvalue.userId!,
-      name:formvalue.name!,
-      surname:formvalue.surname!,
-      username:formvalue.username!,
-      email:formvalue.email!
+      userId:formValue.userId!,
+      name:formValue.name!,
+      surname:formValue.surname!,
+      username:formValue.username!,
+      email:formValue.email!
     }
     this.userService.updateUser(this.userToUpdate.userId, updatedUser)
       .subscribe({
@@ -57,7 +57,7 @@ export class UpdateUserComponent implements OnInit, AfterViewInit {
     this.userToUpdate = this.updateUserService.getUserToUpdate();
 
     let user: UpdatedUser = {
-      userId: this.userToUpdate.userId,
+      userId: this.userToUpdate?.userId,
       name: "",
       surname: "",
       username: "",
@@ -79,7 +79,7 @@ export class UpdateUserComponent implements OnInit, AfterViewInit {
       }
 
       setTimeout(() => {
-        this.userFormupdateComponent?.getAllInputValues().patchValue({
+        this.userFormUpdateComponent?.getAllInputValues().patchValue({
           name: user.name,
           surname: user.surname,
           username: user.username,

@@ -36,7 +36,7 @@ export class ReservationFormComponent implements OnInit{
   reservations = new FormGroup({
    place: new FormControl<string | null >(null, [Validators.required]),
    user:new FormControl<string | null >(null),
-   reservedQuantity:new FormControl<number | null >(null, [Validators.required]),
+   reservedQuantity:new FormControl<number | null >(null, [Validators.required])
 
  });
 

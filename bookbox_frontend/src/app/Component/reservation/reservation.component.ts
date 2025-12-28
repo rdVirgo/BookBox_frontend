@@ -9,6 +9,7 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateReservationService } from '../../update-reservation-service/update-reservation.service';
 import { ReservationService } from '../../service/reservation-service/reservation.service';
 import { Reservation } from '../../Interface/reservation';
 
@@ -47,7 +48,9 @@ export class ReservationComponent implements AfterViewInit, OnInit{
   @ViewChild(MatSort) sort! : MatSort;
 
   constructor(
-    private reservationService: ReservationService
+    private reservationService: ReservationService,
+    private router: Router,
+    private updateReservationService: UpdateReservationService
   ){}
 
   getAllReservation(){
@@ -64,14 +67,41 @@ export class ReservationComponent implements AfterViewInit, OnInit{
   }
 
   filterReservation(event:Event){
-
+    alert("You will filterReservation");
   }
 
-  handleAddReservation(){}
+  handleAddReservation(){
+    const conf = confirm("Do you want to add a new reservation ?");
 
-  handleUpdateReservation(element:any){}
+    if(conf){
+      this.router.navigateByUrl("/add-reservation");
+    }
+  }
 
-  handleDeleteReservation(element:any){}
+  handleUpdateReservation(reservation:Reservation){
+    const conf = confirm("Do you want to update this reservation ?");
+
+    if(conf){
+      this.updateReservationService.redirectToUpdatePageByUrl("/update-reservation",reservation);
+    }
+  }
+
+  handleDeleteReservation(reservation:Reservation){
+    const conf = confirm("Do you want to delete this reservation ?");
+
+    if(conf){
+
+      this.reservationService.deleteReservation(reservation?.reservationId).subscribe({
+        next: () => {
+          this.getAllReservation(),
+          alert("Reservation is deleted.")
+        },
+        error: err => alert('Error : ' + err.message)
+      })
+
+
+    }
+  }
 
   ngOnInit(){
     this.dataSource = new MatTableDataSource<Reservation>([]);
