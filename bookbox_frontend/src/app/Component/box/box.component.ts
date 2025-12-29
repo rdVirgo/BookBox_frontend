@@ -77,6 +77,7 @@ export class BoxComponent implements OnInit, AfterViewInit{
     let conf = confirm("Are you sure you want to update this box ?");
     if (conf){
 
+
       this.updateBoxService.redirectToUpdatePageByUrl("/update-box",box);
     }
   }
