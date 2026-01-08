@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4451609-0651-49fd-afb7-46c81fda58a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bookbox_frontend/src/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/AddElementInComponent/add-user/add-user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/box/box.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/inscription-form/inscription-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/inscription-form/inscription-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/Component/reservation/reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update/user-form-update.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update/user-form-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update/user-form-update.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update/user-form-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/GlobalForms/user-form-update/user-form-update.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/Interface/ResponseUser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-box/update-box.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-reservation/update-reservation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/UpdateElementComponent/update-user/update-user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/update-box-service/update-box.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/update-box-service/update-box.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/update-box-service/update-box.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/update-box-service/update-box.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/update-reservation-service/update-reservation.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/update-reservation-service/update-reservation.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookbox_frontend/src/app/update-reservation-service/update-reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookbox_frontend/src/app/service/update-reservation-service/update-reservation.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +122,7 @@
       <workItem from="1767525272229" duration="925000" />
       <workItem from="1767543056957" duration="72000" />
       <workItem from="1767557184827" duration="1269000" />
-      <workItem from="1767613385292" duration="1783000" />
+      <workItem from="1767613385292" duration="2462000" />
     </task>
     <servers />
   </component>
