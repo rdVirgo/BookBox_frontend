@@ -1,4 +1,4 @@
-"#  Gestion de Boîtes à Livres — Frontend
+#  Gestion de Boîtes à Livres — Frontend
 
 ## Description : 
 
@@ -67,6 +67,7 @@ L’application permet aux utilisateurs d’interagir avec les **API backend** a
 - un environnement : Windows 10+ ou macOS (de preference car le projet a été développé sur ses environnements)
 ## 2. Lancement du projet :
 - a) cloner le dépot en utilisant l'url Https de ce dépot.
+  https://github.com/rdVirgo/BookBox_frontend.git
 - b) installer les dépendances : npm install 
 - c) ng serve : pour lancer l'application , l'application sera accessible sur l'adresse suivante 
   http://localhost:4200
