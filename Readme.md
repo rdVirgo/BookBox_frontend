@@ -8,7 +8,7 @@ L’application permet aux utilisateurs d’interagir avec les **API backend** a
 ## Réalisé par
 
 - COULIBALY Mamadou
-- MERABTENE Radia
+- rdvirgo
 
 
 
